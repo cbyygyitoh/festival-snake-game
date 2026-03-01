@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春节吃汤圆</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fffbeb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #dc2626;
+            margin-bottom: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            background-color: #fef2f2;
+            border: 3px solid #dc2626;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+        }
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #92400e;
+        }
+        .controls {
+            margin-top: 25px;
+            text-align: center;
+            color: #92400e;
+        }
+        .controls p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>春节吃汤圆</h1>
+    <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+        <div style="text-align: center;">
+            <div class="game-info">
+                <div>得分: <span id="score">0</span></div>
+                <div>长度: <span id="length">1</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <p>控制：上下左右方向键移动</p>
+                <p>目标：收集汤圆，增长身体，避免碰到边界</p>
+                <p>祝您春节快乐，万事如意！</p>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; margin-left: 20px; gap: 10px;">
+            <button id="startButton" style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; height: 50px;">开始游戏</button>
+            <button id="pauseButton" style="padding: 8px 16px; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; height: 50px;">暂停游戏</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
